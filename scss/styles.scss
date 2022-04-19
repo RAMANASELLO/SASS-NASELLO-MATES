@@ -1,5 +1,6 @@
 $tamano: 50px;
 $color-bg:white;
+$alineacion:center;
 
 body {
   margin: 0px;
@@ -8,7 +9,7 @@ body {
 }
 
 h1 {
-  text-align: center;
+  text-align: $alineacion;
   font-size: $tamano;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -17,7 +18,7 @@ h1 {
   background-image: linear-gradient(gray, lightgray);
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: $alineacion;
   flex-direction: row-reverse;
   height: 80px;
   padding: 8px;
@@ -33,7 +34,7 @@ h1 {
   ul {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: $alineacion;
     width: 100%;
     list-style-type: none;
   }
@@ -84,11 +85,9 @@ a {
   width: 40%;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: $alineacion;
   padding-left: 5px;
 }
-
-
 
 .d-block img {
   width: 80%;
@@ -102,15 +101,24 @@ a {
   justify-content: end;
 }
 
+.cuerpo{
+  margin-top: 50px;
+}
+
 h3 {
-  text-align: center;
+  text-align: $alineacion;
+  margin-top: 100px;
+}
+
+p {
+  margin-top: 30px;
 }
 
 .seccion-dos {
   margin-top: 24px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: $alineacion;
+  align-items: $alineacion;
   flex-direction: column;
   width: 100%;
 }
@@ -122,8 +130,8 @@ h3 {
   transform: translate(2px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: $alineacion;
+  align-items: $alineacion;
 }
 .card {
   img {
@@ -136,71 +144,54 @@ h3 {
     height: 220px;
     width: 220px;
   }
-}
-
-.card-2 h4 {
-  text-align: center;
+    h4 {
+      text-align: $alineacion;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
 }
 
 .card-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: $alineacion;
+  align-items: $alineacion;
   width: 100%;
 }
 
-h4 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
 
 .footer {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: $alineacion;
   width: 100%;
   background-image: linear-gradient(gray, lightgray);
+    .defensa {
+      display: flex;
+      justify-content: flex-start;
+      align-items: $alineacion;
+    }   
+      .redes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: $alineacion;
+      }
+        .iconos img {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+        }
 }
 
-.defensa {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
 
-.redes {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.iconos img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-body {
-  margin: 0px;
-  padding: 0px;
-}
 
 .nav {
   background-image: linear-gradient(gray, lightgray);
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: $alineacion;
   flex-direction: row-reverse;
   height: 80px;
   padding: 8px;
-}
-
-.lista ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  list-style-type: none;
 }
 
 .lista {
@@ -209,29 +200,29 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 50%;
   padding-right: 5px;
-}
-
-.logo img {
-  height: auto;
-  width: 40px;
+    ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: $alineacion;
+      width: 100%;
+      list-style-type: none;
+    }  
 }
 
 .logo {
+  height: auto;
+  width: 40px;
+  animation: mymove 5s infinite;
+  position: relative;
   font: size 14px;
   color: black;
   width: 40%;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: $alineacion;
   padding-left: 5px;
 }
 
-.logo img {
-  height: auto;
-  width: 40px;
-  animation: mymove 5s infinite;
-  position: relative;
-}
 
 @keyframes mymove {
   0% {
@@ -247,8 +238,8 @@ body {
     left: 180px;
   }
   75% {
-    top: 30px;
-    left: 0px;
+    top: 50px;
+    left: 50px;
   }
   100% {
     top: -30px;
@@ -268,9 +259,9 @@ body {
 .seccion-uno {
   margin-top: 24px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: $alineacion;
+  align-items: $alineacion;
+  text-align: $alineacion;
   flex-direction: column;
   padding-bottom: 180px;
 }
@@ -286,16 +277,18 @@ a {
   text-align: justify;
 }
 
-.historia-img img {
-  width: 400px;
-  border-radius: 8px;
-  position: relative;
-}
+.historia-img {
+  img {
+    width: 400px;
+    border-radius: 8px;
+    position: relative;
+  }  
+} 
 
 .seccion-tres {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: $alineacion;
   padding-bottom: 250px;
   width: 90%;
 }
@@ -314,27 +307,25 @@ h4 {
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: $alineacion;
   width: 100%;
   background-image: linear-gradient(gray, lightgray);
-}
-
-.propaganda {
-  padding-left: 10px;
-}
-
-.defensa h4 {
-  text-align: center;
-}
-
-.redes {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.iconos img {
-  width: 30px;
-  height: 30px;
-}
+      .propaganda {
+      padding-left: 10px;
+    }
+        .defensa h4 {
+          text-align: $alineacion;
+        }     
+          .redes {
+            display: flex;
+             flex-direction: column;
+              justify-content: space-between;
+               align-items: $alineacion;
+          }
+            .iconos{
+              img {
+                 width: 30px;
+                height: 30px;
+              }
+            }
+}              
