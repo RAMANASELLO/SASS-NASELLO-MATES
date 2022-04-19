@@ -1,8 +1,10 @@
 $tamano: 50px;
+$color-bg:white;
 
 body {
   margin: 0px;
   padding: 0px;
+  background-color: $color-bg;
 }
 
 h1 {
